@@ -1,0 +1,706 @@
+@import "normalize";
+@import "reset";
+@import "fonts";
+$width: 1120px;
+@mixin btn_demo {
+    box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+    border-radius: 50px;
+    display: flex;
+    padding: 17px 29px;
+    width: 170px;
+    span {
+        margin: auto;
+        font-family: "AvenirNextCyr";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 160%;
+        letter-spacing: 0.005em;
+        color: #212353;
+        &::after {
+            content: "\2192";
+            padding: 0 0 0 20px;
+            color: #9C69E2;
+            font-size: 16px;
+        }
+    }
+    &:hover,
+    &:focus {
+        background-color: rgb(190, 148, 250);
+    }
+}
+
+@mixin btn_learn {
+    border-radius: 50px;
+    background: #9C69E2;
+    box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+    display: flex;
+    width: 170px;
+    padding: 17px 29px;
+    span {
+        font-family: "AvenirNextCyr";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 160%;
+        color: #FFFFFF;
+        margin: auto;
+    }
+    &:hover,
+    &:focus {
+        background-color: #ffffff;
+        span {
+            color: #212353;
+        }
+    }
+}
+
+a:active,
+a:focus {
+    outline: none;
+}
+
+* {
+    transition: all 0.8s;
+}
+
+body {
+    margin: 0 auto;
+    max-width: $width;
+}
+
+
+/* Header */
+
+.header {
+    max-width: 100%;
+    padding: 50px 0 200px 0;
+    background: linear-gradient(180deg, #F6FAFD 0%, #FFFFFF 19.4%);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo {
+    display: flex;
+    align-items: flex-end;
+}
+
+.circle_1_logo {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #9C69E2;
+    border-radius: 20px;
+}
+
+.circle_2_logo {
+    margin: 0 0 0 9px;
+    display: block;
+    width: 20px;
+    height: 35px;
+    background: #F063B8;
+    border-radius: 20px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu_list {
+    margin: 0 40px 0 40px;
+    padding: 10px;
+}
+
+.menu_list_item {
+    font-family: "AvenirNextCyr";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    color: #4B5D68;
+    &:hover {
+        color: #212353;
+    }
+}
+
+.btn_demo {
+    @include btn_demo;
+    padding: 17px 29px;
+}
+
+.head_block {
+    margin: 130px 0 0 0;
+    display: flex;
+    position: relative;
+}
+
+.txt_header {
+    position: relative;
+    z-index: 4;
+}
+
+.head_header {
+    max-width: 645px;
+    font-family: "Helvetica";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 110%;
+    color: #212353;
+}
+
+.text_header {
+    margin: 50px 0 66px 0;
+    max-width: 380px;
+    font-family: "AvenirNextCyr";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: #4B5D68;
+}
+
+.btn_txt_header {
+    @include btn_learn;
+    padding: 16px 37px;
+}
+
+.img_header {
+    position: absolute;
+    z-index: 2;
+    left: 25%;
+    top: 15%;
+}
+
+
+/* Section_1 */
+
+.section_1 {
+    max-width: 100%;
+    padding: 0 0 150px 0;
+}
+
+.txt_section_1 {
+    display: flex;
+    background: rgba(240, 99, 184, 0.15);
+    border-radius: 50px;
+}
+
+.text_section_1 {
+    padding: 0 92px 0 62px;
+    max-width: 474px;
+    align-self: center;
+}
+
+.head_section_1 {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 130%;
+    color: #212353;
+}
+
+.text_section_11 {
+    margin: 40px 0 0 0;
+    font-family: "AvenirNextCyr";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: #4B5D68;
+}
+
+
+/* Section_2 */
+
+.section_2 {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 75px 0;
+}
+
+.head_section_2 {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 130%;
+    text-align: center;
+    color: #212353;
+}
+
+.text_head_section_2 {
+    padding: 50px 0 50px 0;
+    max-width: 584px;
+    font-family: "AvenirNextCyr";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    text-align: center;
+    color: #4B5D68;
+}
+
+.features_section_2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    margin: 70px 36px;
+    position: relative;
+}
+
+.bcg_feature_1 {
+    position: absolute;
+    z-index: -1;
+    width: 422px;
+    height: 328px;
+    background: #68C9BA;
+    opacity: 0.2;
+    left: 25%;
+    border-radius: 170px 50px 50px 50px;
+}
+
+.bcg_feature_2 {
+    position: absolute;
+    z-index: -1;
+    width: 422px;
+    height: 328px;
+    background: #9C69E2;
+    opacity: 0.2;
+    left: 25%;
+    border-radius: 170px 50px 50px 50px;
+}
+
+.bcg_feature_3 {
+    position: absolute;
+    z-index: -1;
+    width: 411px;
+    height: 328px;
+    background: #F063B8;
+    opacity: 0.2;
+    left: 25%;
+    border-radius: 170px 50px 50px 50px;
+}
+
+.bcg_feature_4 {
+    position: absolute;
+    z-index: -1;
+    width: 411px;
+    height: 328px;
+    background: #2D9CDB;
+    opacity: 0.2;
+    left: 25%;
+    border-radius: 170px 50px 50px 50px;
+}
+
+.txt_feature {
+    max-width: 220px;
+    padding: 0 0 0 30px;
+}
+
+.head_feature {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 130%;
+    color: #212353;
+}
+
+.text_feature {
+    padding: 20px 0 20px 0;
+    font-family: "AvenirNextCyr";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 160%;
+    color: #4B5D68;
+}
+
+.btn_feature {
+    font-family: "AvenirNextCyr";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 160%;
+    display: flex;
+    color: #212353;
+    span {
+        &::after {
+            content: "\2192";
+            padding: 0 0 0 10px;
+            color: #9C69E2;
+            font-size: 16px;
+        }
+    }
+}
+
+
+/* Section_3 */
+
+.section_3 {
+    max-width: 100%;
+    background: #9C69E2;
+    border-radius: 50px;
+    height: 709px;
+}
+
+.head_section_3 {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 130%;
+    color: #FFFFFF;
+    padding: 109px 0 0 93px;
+}
+
+.block_of_cards {
+    padding: 0 0 0 93px;
+    margin: 83px 0 0 0;
+    position: relative;
+}
+
+.cards {
+    display: flex;
+    transition: transform .8s;
+    transform: translateX(0);
+    width: 100%;
+}
+
+.cards_0 {
+    transition: transform .8s;
+    transform: translateX(0);
+}
+
+.cards_0+.cards_btns .btn_card:nth-child(1) {
+    background-color: #F063B8;
+    transform: scale(1.2);
+}
+
+.cards_1 {
+    transition: transform .8s;
+    transform: translateX(-100%);
+}
+
+.cards_1+.cards_btns .btn_card:nth-child(2) {
+    background-color: #F063B8;
+    transform: scale(1.2);
+}
+
+.cards_2 {
+    transition: transform .8s;
+    transform: translateX(-200%);
+}
+
+.cards_2+.cards_btns .btn_card:nth-child(3) {
+    background-color: #F063B8;
+    transform: scale(1.2);
+}
+
+.cards_3 {
+    transition: transform .8s;
+    transform: translateX(-300%);
+}
+
+.cards_3+.cards_btns .btn_card:nth-child(4) {
+    background-color: #F063B8;
+    transform: scale(1.2);
+}
+
+.cards_4 {
+    transition: transform .8s;
+    transform: translateX(-300%);
+}
+
+.card {
+    background: #FFFFFF;
+    box-shadow: 0px 20px 0px rgba(156, 105, 226, 0.3);
+    border-radius: 20px;
+    display: flex;
+    padding: 70px 70px 70px 70px;
+    width: 500px;
+    margin: 0 20px 0 0;
+}
+
+.txt_card {
+    width: 385px;
+    padding: 0 0 0 30px;
+}
+
+.head_card {
+    font-family: "AvenirNextCyr";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: 0.005em;
+    color: #212353;
+}
+
+.name_card {
+    font-family: "AvenirNextCyr";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 0.01em;
+    color: #9C69E2;
+}
+
+.text_card {
+    padding: 19px 0 0 0;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 180%;
+    color: #4B5D68;
+}
+
+.cards_btns {
+    display: flex;
+    margin: 60px 0 0 0;
+    align-items: center;
+}
+
+.btn_card {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+
+/* Footer */
+
+.footer {
+    max-width: 100%;
+    margin: 284px 0 100px 0;
+}
+
+.nav_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.head_footer {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 130%;
+    color: #212353;
+}
+
+.text_head {
+    font-family: "AvenirNextCyr";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: #4B5D68;
+}
+
+.btn_demo_footer {
+    @include btn_demo;
+}
+
+.btn_txt_footer {
+    @include btn_learn;
+    background: #F063B8;
+    span {
+        margin: auto;
+    }
+}
+
+.menu_footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 170px 0 0 0;
+}
+
+.logo_footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo_head {
+    padding: 0 0 30px 0;
+}
+
+.head_logo_footer {
+    align-self: center;
+    font-family: "AvenirNextCyr";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 160%;
+    color: #212353;
+    padding: 0 0 0 20px;
+}
+
+.adress_footer {
+    font-family: "AvenirNextCyr";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 180%;
+    letter-spacing: 0.01em;
+    color: #212353;
+    padding: 0 0 20px 0;
+}
+
+.email_footer {
+    font-family: "AvenirNextCyr";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 180%;
+    letter-spacing: 0.01em;
+    color: #212353;
+}
+
+.about_footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.head_menu_footer {
+    font-family: "AvenirNextCyr";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 160%;
+    color: #212353;
+    padding: 0 0 30px 0;
+}
+
+.link_about {
+    font-family: "AvenirNextCyr";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 250%;
+    color: #212353;
+}
+
+.help_footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.social_icons {
+    display: flex;
+}
+
+.facebook {
+    background: #212353;
+    opacity: 0.1;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border-radius: 50%;
+    margin: 0 14px 0 0;
+    img {
+        margin: auto;
+    }
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+}
+
+.twitter {
+    background: #212353;
+    opacity: 0.1;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border-radius: 50%;
+    margin: 0 14px 0 0;
+    img {
+        margin: auto;
+    }
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+}
+
+.instagramm {
+    background: #212353;
+    opacity: 0.1;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border-radius: 50%;
+    img {
+        margin: auto;
+    }
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+}
+
+.rights {
+    display: flex;
+    justify-content: space-between;
+}
+
+.txt_rights {
+    font-family: "AvenirNextCyr";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 180%;
+    letter-spacing: 0.01em;
+    color: #212353;
+    padding: 0 0 0 73px;
+}
+
+.message_footer {
+    background: #EAE0F9;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    width: 60px;
+    height: 60px;
+    margin: 0 50px 0 0;
+    &:hover,
+    &:focus {
+        background: #9C69E2;
+    }
+}
+
+.message_icon {
+    fill: #9C69E2;
+    margin: auto;
+    &:hover {
+        fill: #ffffff;
+    }
+    &:hover circle {
+        fill: black;
+    }
+}
