@@ -71,3 +71,14 @@
 .btn_menu {
     position: fixed;
 }
+
+.logo_btn {
+    display: flex;
+    align-self: flex-start;
+    position: fixed;
+    z-index: 7;
+    padding: 3vh 100% 0 7vh;
+    background-color: #FBFBFB;
+    top: 21px;
+    left: 0;
+}

@@ -945,6 +945,20 @@ textarea {
   position: fixed;
 }
 
+.logo_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  position: fixed;
+  z-index: 7;
+  padding: 3vh 100% 0 7vh;
+  background-color: #FBFBFB;
+  top: 21px;
+  left: 0;
+}
+
 a:active,
 a:focus {
   outline: none;
@@ -1758,11 +1772,12 @@ body {
   top: 9px;
   left: 20px;
   margin-right: 76px;
-  margin-left: 25px;
+  margin-left: 20px;
 }
 
 .btn_next:hover .next {
   width: 40px;
+  margin-left: 0;
   margin-right: 20px;
 }
 
