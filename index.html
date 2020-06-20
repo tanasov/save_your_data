@@ -22,6 +22,9 @@
                 <li class="menu_list"><a href="#" class="menu_list_item">Signup</a></li>
             </ul>
             <a href="#" class="btn_demo"><span>Request Demo</span></a>
+            <div class="burger">
+                <span class></span>
+            </div>
         </nav>
         <div class="head_block">
             <div class="txt_header">
@@ -35,7 +38,7 @@
     <main class="main">
         <section class="section_1">
             <div class="txt_section_1">
-                <img src="./img/img_section_1.png" alt="img_section_1" width="504" height="477">
+                <img class="img_section_1" src="./img/img_section_1.png" alt="img_section_1" width="504" height="477">
                 <div class="text_section_1">
                     <h2 class="head_section_1">We are a high-level data storage bank</h2>
                     <p class="text_section_11">The place to store various data that you can access at any time through the internet and where you can carry it. This very flexible storage area has a high level of security. To enter into your own data you must enter the password
@@ -88,8 +91,8 @@
         <section class="section_3">
             <h2 class="head_section_3">Testimonials</h2>
             <div class="block_of_cards">
-                <div class="cards cards_0">
-                    <div class="card">
+                <div class="cards">
+                    <div class="card fade">
                         <img src="./img/img_1_card.png" alt="img_card" width="90" height="90">
                         <div class="txt_card">
                             <h4 class="head_card">John Fang</h4>
@@ -97,7 +100,7 @@
                             <p class="text_card">Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.</p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card fade">
                         <img src="./img/img_2_card.png" alt="img_card" width="90" height="90">
                         <div class="txt_card">
                             <h4 class="head_card">John Fang</h4>
@@ -105,7 +108,7 @@
                             <p class="text_card">Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.</p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card fade">
                         <img src="./img/img_3_card.png" alt="img_card" width="90" height="90">
                         <div class="txt_card">
                             <h4 class="head_card">John Fang</h4>
@@ -113,16 +116,8 @@
                             <p class="text_card">Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.</p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card fade">
                         <img src="./img/img_1_card.png" alt="img_card" width="90" height="90">
-                        <div class="txt_card">
-                            <h4 class="head_card">John Fang</h4>
-                            <span class="name_card">wordfaang.com</span>
-                            <p class="text_card">Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="./img/img_2_card.png" alt="img_card" width="90" height="90">
                         <div class="txt_card">
                             <h4 class="head_card">John Fang</h4>
                             <span class="name_card">wordfaang.com</span>
@@ -131,78 +126,82 @@
                     </div>
                 </div>
                 <div class="cards_btns">
-                    <span class="btn_card"></span>
-                    <span class="btn_card"></span>
-                    <span class="btn_card"></span>
-                    <span class="btn_card"></span>
+                    <span class="btn_card" onclick="currentSlide(1)"></span>
+                    <span class="btn_card" onclick="currentSlide(2)"></span>
+                    <span class="btn_card" onclick="currentSlide(3)"></span>
+                    <span class="btn_card" onclick="currentSlide(4)"></span>
+                    <div class="btn_prev" onclick="plusSlides(-1)"><span class="prev"></span></div>
+                    <div class="btn_next" onclick="plusSlides(1)"><span class="next"></span></div>
                 </div>
+
             </div>
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="nav_footer">
-            <div class="txt">
-                <h2 class="head_footer">Try for free!</h2>
-                <span class="text_head">Get limited 1 week free try our features!</span>
+    <footer class="footer ">
+        <div class="nav_footer ">
+            <div class="txt ">
+                <h2 class="head_footer ">Try for free!</h2>
+                <span class="text_head ">Get limited 1 week free try our features!</span>
             </div>
-            <a href="" class="btn_txt_footer"><span>Lear more</span></a>
-            <a href="#" class="btn_demo_footer"><span>Request Demo</span></a>
+            <a href=" " class="btn_txt_footer "><span>Lear more</span></a>
+            <a href="# " class="btn_demo_footer "><span>Request Demo</span></a>
         </div>
-        <div class="menu_footer">
-            <div class="logo_footer">
-                <div class="logo logo_head">
-                    <span class="circle_1_logo"></span>
-                    <span class="circle_2_logo"></span>
-                    <span class="head_logo_footer">DataWarehouse</span>
+        <div class="menu_footer ">
+            <div class="logo_footer ">
+                <div class="logo_footer_img ">
+                    <span class="circle_1_logo "></span>
+                    <span class="circle_2_logo "></span>
+                    <span class="head_logo_footer ">DataWarehouse</span>
                 </div>
-                <a href="#" class="adress_footer">Warehouse Society, 234 <br>Bahagia Ave Street PRBW 29281</a>
-                <a href="#" class="email_footer">info@warehouse.project <br> 1-232-3434 (Main)</a>
+                <a href="# " class="adress_footer ">Warehouse Society, 234 <br>Bahagia Ave Street PRBW 29281</a>
+                <a href="# " class="email_footer ">info@warehouse.project <br> 1-232-3434 (Main)</a>
             </div>
-            <div class="about_footer">
-                <h3 class="head_menu_footer">About</h3>
-                <a href="#" class="link_about">Profile</a>
-                <a href="#" class="link_about">Features</a>
-                <a href="#" class="link_about">Careers</a>
-                <a href="#" class="link_about">DW News</a>
+            <div class="about_footer ">
+                <h3 class="head_menu_footer ">About</h3>
+                <a href="# " class="link_about ">Profile</a>
+                <a href="# " class="link_about ">Features</a>
+                <a href="# " class="link_about ">Careers</a>
+                <a href="# " class="link_about ">DW News</a>
             </div>
-            <div class="help_footer">
-                <h3 class="head_menu_footer">Help</h3>
-                <a href="#" class="link_about">Support</a>
-                <a href="#" class="link_about">Sing Up</a>
-                <a href="#" class="link_about">Guide</a>
-                <a href="#" class="link_about">Reports</a>
-                <a href="#" class="link_about">Q&A</a>
+            <div class="help_footer ">
+                <h3 class="head_menu_footer ">Help</h3>
+                <a href="# " class="link_about ">Support</a>
+                <a href="# " class="link_about ">Sing Up</a>
+                <a href="# " class="link_about ">Guide</a>
+                <a href="# " class="link_about ">Reports</a>
+                <a href="# " class="link_about ">Q&A</a>
             </div>
-            <div class="social_footer">
-                <h3 class="head_menu_footer">Social Media</h3>
-                <div class="social_icons">
-                    <a href="#" class="facebook">
-                        <img src="./img/facebook.png" alt="#" width="9.58" height="20.49">
+            <div class="social_footer ">
+                <h3 class="head_menu_footer ">Social Media</h3>
+                <div class="social_icons ">
+                    <a href="# " class="facebook ">
+                        <img src="./img/facebook.png " alt="# " width="9.58 " height="20.49 ">
                     </a>
-                    <a href="#" class="twitter">
-                        <img src="./img/twitter.png" alt="">
+                    <a href="# " class="twitter ">
+                        <img src="./img/twitter.png " alt=" ">
                     </a>
-                    <a href="#" class="instagramm">
-                        <img src="./img/instagramm.png" alt="">
+                    <a href="# " class="instagramm ">
+                        <img src="./img/instagramm.png " alt=" ">
                     </a>
                 </div>
             </div>
         </div>
-        <div class="rights">
-            <div class="txt_rights">© Datawarehouse™, 2020. All rights reserved. <br> Company Registration Number: 21479524.</div>
-            <a href="#" class="message_footer">
-                <svg class="message_icon" width="30" height="29" viewBox="0 0 30 29" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 10C0 4.47715 4.47715 0 10 0H20C25.5228 0 30 4.47715 30 10V14C30 19.5228 25.5228 24 20 24H0V10Z" />
-                    <circle cx="9" cy="12" r="2" fill="white"/>
-                    <circle cx="15" cy="12" r="2" fill="white"/>
-                    <circle cx="21" cy="12" r="2" fill="white"/>
-                    <path d="M10 23H0V25.4676C0 27.0222 1.69594 27.9824 3.02899 27.1826L10 23Z" />
+        <div class="rights ">
+            <div class="txt_rights ">© Datawarehouse™, 2020. All rights reserved. <br> Company Registration Number: 21479524.</div>
+            <a href="# " class="message_footer ">
+                <svg class="message_icon " width="30 " height="29 " viewBox="0 0 30 29 " xmlns="http://www.w3.org/2000/svg ">
+                    <path d="M0 10C0 4.47715 4.47715 0 10 0H20C25.5228 0 30 4.47715 30 10V14C30 19.5228 25.5228 24 20 24H0V10Z " />
+                    <circle cx="9 " cy="12 " r="2 " fill="white "/>
+                    <circle cx="15 " cy="12 " r="2 " fill="white "/>
+                    <circle cx="21 " cy="12 " r="2 " fill="white "/>
+                    <path d="M10 23H0V25.4676C0 27.0222 1.69594 27.9824 3.02899 27.1826L10 23Z " />
                     </svg>
             </a>
         </div>
     </footer>
-    <script src="./js/btns_card.js"></script>
+    <script src="./js/btn_menu.js "></script>
+    <script src="./js/btns_card.js "></script>
 </body>
 
 </html>

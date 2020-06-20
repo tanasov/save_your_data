@@ -1,9 +1,30 @@
-var btn = document.querySelectorAll('.btn_card'),
-    three = document.querySelectorAll('.cards')[0],
-    btc_car = document.querySelectorAll('.btn_card')[0];
-for (let i = 0; i < btn.length; i++) {
-    btn[i].addEventListener('click', function() {
-        three.className = 'cards';
-        three.classList.add('cards_' + i);
-    })
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("card");
+    var dots = document.getElementsByClassName("btn_card");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "flex";
+    dots[slideIndex - 1].className += " active";
 }

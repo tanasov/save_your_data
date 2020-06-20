@@ -1,60 +1,8 @@
 @import "normalize";
 @import "reset";
 @import "fonts";
-$width: 1120px;
-@mixin btn_demo {
-    box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
-    border-radius: 50px;
-    display: flex;
-    padding: 17px 29px;
-    width: 170px;
-    span {
-        margin: auto;
-        font-family: "AvenirNextCyr";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 160%;
-        letter-spacing: 0.005em;
-        color: #212353;
-        &::after {
-            content: "\2192";
-            padding: 0 0 0 20px;
-            color: #9C69E2;
-            font-size: 16px;
-        }
-    }
-    &:hover,
-    &:focus {
-        background-color: rgb(190, 148, 250);
-    }
-}
-
-@mixin btn_learn {
-    border-radius: 50px;
-    background: #9C69E2;
-    box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
-    display: flex;
-    width: 170px;
-    padding: 17px 29px;
-    span {
-        font-family: "AvenirNextCyr";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 160%;
-        color: #FFFFFF;
-        margin: auto;
-    }
-    &:hover,
-    &:focus {
-        background-color: #ffffff;
-        span {
-            color: #212353;
-        }
-    }
-}
-
+@import "burger";
+@import "mixin";
 a:active,
 a:focus {
     outline: none;
@@ -62,6 +10,8 @@ a:focus {
 
 * {
     transition: all 0.8s;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -76,24 +26,36 @@ body {
     max-width: 100%;
     padding: 50px 0 200px 0;
     background: linear-gradient(180deg, #F6FAFD 0%, #FFFFFF 19.4%);
+    @media (max-width: 1024px) {
+        padding: 0 0 200px 0;
+    }
 }
 
 .nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    @media (max-width: 1024px) {
+        flex-direction: column;
+    }
 }
 
 .logo {
     display: flex;
     align-items: flex-end;
+    @media (max-width: 1024px) {
+        position: absolute;
+        z-index: 7;
+        top: 6vh;
+        left: 7vh;
+    }
 }
 
 .circle_1_logo {
     display: block;
     width: 20px;
     height: 20px;
-    background: #9C69E2;
+    background: $color_site;
     border-radius: 20px;
 }
 
@@ -106,8 +68,21 @@ body {
     border-radius: 20px;
 }
 
+// Menu burger_btn
 .menu {
     display: flex;
+}
+
+@import "burger";
+.logo_btn {
+    display: flex;
+    align-self: flex-start;
+    position: fixed;
+    z-index: 7;
+    padding: 3vh 100% 0 7vh;
+    background-color: #FBFBFB;
+    top: 21px;
+    left: 0;
 }
 
 .menu_list {
@@ -116,52 +91,70 @@ body {
 }
 
 .menu_list_item {
-    font-family: "AvenirNextCyr";
+    font-family: $font-family_1;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: $fs_1_txt;
     line-height: 160%;
     color: #4B5D68;
     &:hover {
-        color: #212353;
+        color: $color_txt_1;
     }
 }
 
 .btn_demo {
     @include btn_demo;
     padding: 17px 29px;
+    @media (max-width: 1024px) {
+        display: none;
+    }
 }
 
 .head_block {
     margin: 130px 0 0 0;
     display: flex;
     position: relative;
+    @media (max-width: 1024px) {
+        justify-content: center;
+    }
 }
 
 .txt_header {
     position: relative;
     z-index: 4;
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .head_header {
     max-width: 645px;
-    font-family: "Helvetica";
+    font-family: $font-family_1;
     font-style: normal;
     font-weight: bold;
     font-size: 80px;
     line-height: 110%;
-    color: #212353;
+    color: $color_txt_1;
+    @media (max-width: 655px) {
+        font-size: 46px;
+        padding: 0 0 0 20px;
+    }
 }
 
 .text_header {
     margin: 50px 0 66px 0;
     max-width: 380px;
-    font-family: "AvenirNextCyr";
+    font-family: $font-family_1;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 160%;
     color: #4B5D68;
+    @media (max-width: 655px) {
+        padding: 0 0 0 20px;
+    }
 }
 
 .btn_txt_header {
@@ -174,6 +167,11 @@ body {
     z-index: 2;
     left: 25%;
     top: 15%;
+    @media (max-width: 1024px) {
+        left: 0;
+        width: 87%;
+        height: auto;
+    }
 }
 
 
@@ -182,37 +180,58 @@ body {
 .section_1 {
     max-width: 100%;
     padding: 0 0 150px 0;
+    @media (max-width: 1024px) {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .txt_section_1 {
     display: flex;
     background: rgba(240, 99, 184, 0.15);
     border-radius: 50px;
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .text_section_1 {
     padding: 0 92px 0 62px;
     max-width: 474px;
     align-self: center;
+    @media (max-width: 655px) {
+        padding: 0 20px;
+    }
+}
+
+.img_section_1 {
+    @media (max-width: 655px) {
+        width: 70%;
+        height: auto;
+    }
 }
 
 .head_section_1 {
-    font-family: "Helvetica";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 130%;
-    color: #212353;
+    @include head_section;
+    text-align: left;
+    @media (max-width: 1024px) {
+        text-align: center;
+    }
 }
 
 .text_section_11 {
     margin: 40px 0 0 0;
-    font-family: "AvenirNextCyr";
+    font-family: $font-family_1;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 160%;
     color: #4B5D68;
+    @media (max-width: 1024px) {
+        text-align: center;
+        margin: 40px 0;
+    }
 }
 
 
@@ -227,19 +246,13 @@ body {
 }
 
 .head_section_2 {
-    font-family: "Helvetica";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 130%;
-    text-align: center;
-    color: #212353;
+    @include head_section;
 }
 
 .text_head_section_2 {
     padding: 50px 0 50px 0;
     max-width: 584px;
-    font-family: "AvenirNextCyr";
+    font-family: $font-family_1;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -259,6 +272,9 @@ body {
     align-items: center;
     margin: 70px 36px;
     position: relative;
+    @media (max-width: 655px) {
+        flex-direction: column;
+    }
 }
 
 .bcg_feature_1 {
@@ -270,6 +286,11 @@ body {
     opacity: 0.2;
     left: 25%;
     border-radius: 170px 50px 50px 50px;
+    @media (max-width: 655px) {
+        width: 300px;
+        left: -12%;
+        top: 33%;
+    }
 }
 
 .bcg_feature_2 {
@@ -277,10 +298,15 @@ body {
     z-index: -1;
     width: 422px;
     height: 328px;
-    background: #9C69E2;
+    background: $color_site;
     opacity: 0.2;
     left: 25%;
     border-radius: 170px 50px 50px 50px;
+    @media (max-width: 655px) {
+        width: 300px;
+        left: -12%;
+        top: 25%;
+    }
 }
 
 .bcg_feature_3 {
@@ -292,6 +318,11 @@ body {
     opacity: 0.2;
     left: 25%;
     border-radius: 170px 50px 50px 50px;
+    @media (max-width: 655px) {
+        width: 300px;
+        left: -12%;
+        top: 25%;
+    }
 }
 
 .bcg_feature_4 {
@@ -303,6 +334,11 @@ body {
     opacity: 0.2;
     left: 25%;
     border-radius: 170px 50px 50px 50px;
+    @media (max-width: 655px) {
+        width: 300px;
+        left: -12%;
+        top: 33%;
+    }
 }
 
 .txt_feature {
@@ -311,38 +347,38 @@ body {
 }
 
 .head_feature {
-    font-family: "Helvetica";
+    font-family: $font-family_1;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 130%;
-    color: #212353;
+    color: $color_txt_1;
 }
 
 .text_feature {
     padding: 20px 0 20px 0;
-    font-family: "AvenirNextCyr";
+    font-family: $font-family_1;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: $fs_1_txt;
     line-height: 160%;
     color: #4B5D68;
 }
 
 .btn_feature {
-    font-family: "AvenirNextCyr";
+    font-family: $font-family_1;
     font-style: normal;
     font-weight: 800;
-    font-size: 16px;
+    font-size: $fs_1_txt;
     line-height: 160%;
     display: flex;
-    color: #212353;
+    color: $color_txt_1;
     span {
         &::after {
             content: "\2192";
             padding: 0 0 0 10px;
-            color: #9C69E2;
-            font-size: 16px;
+            color: $color_site;
+            font-size: $fs_1_txt;
         }
     }
 }
@@ -352,19 +388,24 @@ body {
 
 .section_3 {
     max-width: 100%;
-    background: #9C69E2;
+    background: $color_site;
     border-radius: 50px;
     height: 709px;
+    @media (max-width: 1024px) {
+        max-width: 83%;
+        height: 598px;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
 }
 
 .head_section_3 {
-    font-family: "Helvetica";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 130%;
-    color: #FFFFFF;
+    @include head_section;
     padding: 109px 0 0 93px;
+    color: #ffffff;
 }
 
 .block_of_cards {
@@ -375,54 +416,8 @@ body {
 
 .cards {
     display: flex;
-    transition: transform .8s;
-    transform: translateX(0);
     width: 100%;
-}
-
-.cards_0 {
-    transition: transform .8s;
-    transform: translateX(0);
-}
-
-.cards_0+.cards_btns .btn_card:nth-child(1) {
-    background-color: #F063B8;
-    transform: scale(1.2);
-}
-
-.cards_1 {
-    transition: transform .8s;
-    transform: translateX(-100%);
-}
-
-.cards_1+.cards_btns .btn_card:nth-child(2) {
-    background-color: #F063B8;
-    transform: scale(1.2);
-}
-
-.cards_2 {
-    transition: transform .8s;
-    transform: translateX(-200%);
-}
-
-.cards_2+.cards_btns .btn_card:nth-child(3) {
-    background-color: #F063B8;
-    transform: scale(1.2);
-}
-
-.cards_3 {
-    transition: transform .8s;
-    transform: translateX(-300%);
-}
-
-.cards_3+.cards_btns .btn_card:nth-child(4) {
-    background-color: #F063B8;
-    transform: scale(1.2);
-}
-
-.cards_4 {
-    transition: transform .8s;
-    transform: translateX(-300%);
+    position: relative;
 }
 
 .card {
@@ -441,28 +436,28 @@ body {
 }
 
 .head_card {
-    font-family: "AvenirNextCyr";
+    font-family: $font-family_1;
     font-style: normal;
     font-weight: 900;
     font-size: 18px;
     line-height: 160%;
     letter-spacing: 0.005em;
-    color: #212353;
+    color: $color_txt_1;
 }
 
 .name_card {
-    font-family: "AvenirNextCyr";
+    font-family: $font-family_1;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 160%;
     letter-spacing: 0.01em;
-    color: #9C69E2;
+    color: $color_site;
 }
 
 .text_card {
     padding: 19px 0 0 0;
-    font-family: Avenir;
+    font-family: $font-family_1;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -486,6 +481,117 @@ body {
     cursor: pointer;
     &:hover {
         transform: scale(1.2);
+        background: #F063B8;
+    }
+}
+
+.btn_prev {
+    margin-left: auto;
+    cursor: pointer;
+    position: relative;
+    width: 40px;
+    height: 8px;
+    align-self: center;
+    top: 9px;
+    left: 20px;
+    &:hover .prev {
+        width: 40px;
+        margin-right: 20px;
+    }
+}
+
+.btn_next {
+    margin-left: auto;
+    cursor: pointer;
+    position: relative;
+    width: 40px;
+    height: 8px;
+    align-self: center;
+    top: 9px;
+    left: 20px;
+    margin-right: 76px;
+    margin-left: 25px;
+    &:hover .next {
+        width: 40px;
+        margin-right: 20px;
+    }
+}
+
+.active {
+    transform: scale(1.2);
+    background: #F063B8;
+}
+
+.prev {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #000000;
+    left: 0;
+    display: block;
+    transition: 0.6s ease;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 7px;
+        height: 2px;
+        top: 3px;
+        background: black;
+        transform: rotate(45deg);
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        width: 7px;
+        height: 2px;
+        bottom: 3px;
+        background: black;
+        transform: rotate(-45deg);
+    }
+}
+
+.next {
+    cursor: pointer;
+    position: relative;
+    width: 20px;
+    height: 2px;
+    background-color: #000000;
+    left: 0;
+    display: block;
+    align-self: center;
+    transition: 0.6s ease;
+    transform: rotate(180deg);
+    &::after {
+        content: '';
+        position: absolute;
+        width: 7px;
+        height: 2px;
+        top: 3px;
+        background: black;
+        transform: rotate(45deg);
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        width: 7px;
+        height: 2px;
+        bottom: 3px;
+        background: black;
+        transform: rotate(-45deg);
+    }
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
     }
 }
 
@@ -504,16 +610,12 @@ body {
 }
 
 .head_footer {
-    font-family: "Helvetica";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 130%;
-    color: #212353;
+    @include head_section;
+    text-align: left;
 }
 
 .text_head {
-    font-family: "AvenirNextCyr";
+    font-family: $font-family_1;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -544,40 +646,42 @@ body {
     flex-direction: column;
 }
 
-.logo_head {
+.logo_footer_img {
+    display: flex;
+    align-items: flex-end;
     padding: 0 0 30px 0;
 }
 
 .head_logo_footer {
     align-self: center;
-    font-family: "AvenirNextCyr";
+    font-family: $font-family_1;
     font-style: normal;
     font-weight: 900;
     font-size: 20px;
     line-height: 160%;
-    color: #212353;
+    color: $color_txt_1;
     padding: 0 0 0 20px;
 }
 
 .adress_footer {
-    font-family: "AvenirNextCyr";
+    font-family: $font-family_1;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: $fs_1_txt;
     line-height: 180%;
     letter-spacing: 0.01em;
-    color: #212353;
+    color: $color_txt_1;
     padding: 0 0 20px 0;
 }
 
 .email_footer {
-    font-family: "AvenirNextCyr";
+    font-family: $font-family_1;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: $fs_1_txt;
     line-height: 180%;
     letter-spacing: 0.01em;
-    color: #212353;
+    color: $color_txt_1;
 }
 
 .about_footer {
@@ -586,22 +690,22 @@ body {
 }
 
 .head_menu_footer {
-    font-family: "AvenirNextCyr";
+    font-family: $font-family_1;
     font-style: normal;
     font-weight: 900;
-    font-size: 16px;
+    font-size: $fs_1_txt;
     line-height: 160%;
-    color: #212353;
+    color: $color_txt_1;
     padding: 0 0 30px 0;
 }
 
 .link_about {
-    font-family: "AvenirNextCyr";
+    font-family: $font-family_1;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: $fs_1_txt;
     line-height: 250%;
-    color: #212353;
+    color: $color_txt_1;
 }
 
 .help_footer {
@@ -614,7 +718,7 @@ body {
 }
 
 .facebook {
-    background: #212353;
+    background: $color_txt_1;
     opacity: 0.1;
     width: 50px;
     height: 50px;
@@ -631,7 +735,7 @@ body {
 }
 
 .twitter {
-    background: #212353;
+    background: $color_txt_1;
     opacity: 0.1;
     width: 50px;
     height: 50px;
@@ -648,7 +752,7 @@ body {
 }
 
 .instagramm {
-    background: #212353;
+    background: $color_txt_1;
     opacity: 0.1;
     width: 50px;
     height: 50px;
@@ -669,13 +773,13 @@ body {
 }
 
 .txt_rights {
-    font-family: "AvenirNextCyr";
+    font-family: $font-family_1;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 180%;
     letter-spacing: 0.01em;
-    color: #212353;
+    color: $color_txt_1;
     padding: 0 0 0 73px;
 }
 
@@ -690,12 +794,12 @@ body {
     margin: 0 50px 0 0;
     &:hover,
     &:focus {
-        background: #9C69E2;
+        background: $color_site;
     }
 }
 
 .message_icon {
-    fill: #9C69E2;
+    fill: $color_site;
     margin: auto;
     &:hover {
         fill: #ffffff;
