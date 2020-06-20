@@ -1643,6 +1643,12 @@ body {
   }
 }
 
+@media (max-width: 665px) {
+  .section_3 {
+    padding: 20px 0;
+  }
+}
+
 .head_section_3 {
   font-family: "Helvetica";
   font-style: normal;
@@ -1654,17 +1660,31 @@ body {
   color: #ffffff;
 }
 
+@media (max-width: 1024px) {
+  .head_section_3 {
+    padding: 0;
+  }
+}
+
 .block_of_cards {
   padding: 0 0 0 93px;
   margin: 83px 0 0 0;
   position: relative;
 }
 
+@media (max-width: 1024px) {
+  .block_of_cards {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+}
+
 .cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  max-width: 100%;
   position: relative;
 }
 
@@ -1681,9 +1701,33 @@ body {
   margin: 0 20px 0 0;
 }
 
+@media (max-width: 1024px) {
+  .card {
+    width: 443px;
+  }
+}
+
+@media (max-width: 665px) {
+  .card {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .txt_card {
   width: 385px;
   padding: 0 0 0 30px;
+}
+
+@media (max-width: 665px) {
+  .txt_card {
+    max-width: 80%;
+  }
 }
 
 .head_card {
@@ -1720,7 +1764,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 60px 0 0 0;
+  padding: 60px 0 0 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1791,7 +1835,7 @@ body {
   position: absolute;
   width: 20px;
   height: 2px;
-  background-color: #000000;
+  background-color: #ffffff;
   left: 0;
   display: block;
   -webkit-transition: 0.6s ease;
@@ -1804,7 +1848,7 @@ body {
   width: 7px;
   height: 2px;
   top: 3px;
-  background: black;
+  background: #ffffff;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -1815,7 +1859,7 @@ body {
   width: 7px;
   height: 2px;
   bottom: 3px;
-  background: black;
+  background: #ffffff;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
@@ -1825,7 +1869,7 @@ body {
   position: relative;
   width: 20px;
   height: 2px;
-  background-color: #000000;
+  background-color: #ffffff;
   left: 0;
   display: block;
   -ms-flex-item-align: center;
@@ -1843,7 +1887,7 @@ body {
   width: 7px;
   height: 2px;
   top: 3px;
-  background: black;
+  background: #ffffff;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -1854,7 +1898,7 @@ body {
   width: 7px;
   height: 2px;
   bottom: 3px;
-  background: black;
+  background: #ffffff;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
@@ -1901,6 +1945,17 @@ body {
       justify-content: space-around;
 }
 
+@media (max-width: 665px) {
+  .nav_footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+}
+
 .head_footer {
   font-family: "Helvetica";
   font-style: normal;
@@ -1911,6 +1966,12 @@ body {
   text-align: left;
 }
 
+@media (max-width: 665px) {
+  .head_footer {
+    text-align: center;
+  }
+}
+
 .text_head {
   font-family: "AvenirNextCyr";
   font-style: normal;
@@ -1918,6 +1979,14 @@ body {
   font-size: 18px;
   line-height: 160%;
   color: #4B5D68;
+}
+
+@media (max-width: 665px) {
+  .text_head {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 .btn_demo_footer {
@@ -1951,6 +2020,12 @@ body {
 
 .btn_demo_footer:hover, .btn_demo_footer:focus {
   background-color: #be94fa;
+}
+
+@media (max-width: 665px) {
+  .btn_demo_footer {
+    margin: 20px 0 0 0;
+  }
 }
 
 .btn_txt_footer {
@@ -1988,6 +2063,12 @@ body {
   margin: auto;
 }
 
+@media (max-width: 665px) {
+  .btn_txt_footer {
+    margin: 20px 0 0 0;
+  }
+}
+
 .menu_footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1995,6 +2076,21 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 170px 0 0 0;
+}
+
+@media (max-width: 665px) {
+  .menu_footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .logo_footer {
@@ -2041,6 +2137,12 @@ body {
   padding: 0 0 20px 0;
 }
 
+@media (max-width: 665px) {
+  .adress_footer {
+    text-align: center;
+  }
+}
+
 .email_footer {
   font-family: "AvenirNextCyr";
   font-style: normal;
@@ -2051,6 +2153,12 @@ body {
   color: #212353;
 }
 
+@media (max-width: 665px) {
+  .email_footer {
+    text-align: center;
+  }
+}
+
 .about_footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2059,6 +2167,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (max-width: 665px) {
+  .about_footer {
+    display: none;
+  }
 }
 
 .head_menu_footer {
@@ -2088,6 +2202,18 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (max-width: 665px) {
+  .help_footer {
+    display: none;
+  }
+}
+
+@media (max-width: 665px) {
+  .social_footer h3 {
+    text-align: center;
+  }
 }
 
 .social_icons {
@@ -2162,6 +2288,12 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 665px) {
+  .rights {
+    padding: 20px 0 0 0;
+  }
 }
 
 .txt_rights {
