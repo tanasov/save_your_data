@@ -418,6 +418,9 @@ body {
     display: flex;
     max-width: 100%;
     position: relative;
+    @media (max-width: 655px) {
+        padding: 0 20px;
+    }
 }
 
 .card {
@@ -439,11 +442,18 @@ body {
     }
 }
 
+.img_card {
+    @media (max-width: 665px) {
+        align-self: center;
+    }
+}
+
 .txt_card {
     width: 385px;
     padding: 0 0 0 30px;
     @media (max-width: 665px) {
         max-width: 80%;
+        text-align: center;
     }
 }
 
